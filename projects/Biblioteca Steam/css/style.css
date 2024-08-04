@@ -1,0 +1,131 @@
+:root {
+  --header-background1:rgb(28, 34,44);
+  --header-background2:rgb(29, 41,56);
+  --header-text1: rgb(109,115,126);
+  --header-text1-hoover: rgb(213,217,234);
+  --header-text2: #c5ced8;
+  --header-text2-click: rgb(255,255,255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  font-family: sans-serif;
+}
+
+header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  background-color: var(--header-background1);
+  height: clamp(80px, 12.5vh, 200px);
+}
+header .informations {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+header .informations .division1 {
+  font-size: 0.7em;
+}
+header .informations .division1 a {
+  color: var(--header-text1);
+  padding-right: 10px;
+}
+header .informations .division1 a:hover {
+  color: var(--header-text1-hoover);
+}
+header .informations .division2 {
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+header .informations .division2 a {
+  color: var(--header-text2);
+  margin-right: 15px;
+}
+header .informations .division2 a:hover {
+  color: var(--header-text2);
+  text-shadow: 0px 0px 3px;
+}
+header .informations .division2 #btn_library {
+  color: rgb(9, 140, 228);
+  border-bottom: solid rgb(9, 140, 228) 3px;
+}
+header .informations .division2 a:nth-child(1), header .informations .division2 a:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+header .informations .division2 a:nth-child(1) img, header .informations .division2 a:nth-child(2) img {
+  height: 1.3em;
+}
+header .informations .division2 a:nth-child(1):hover, header .informations .division2 a:nth-child(2):hover {
+  filter: brightness(1.5);
+}
+header .informations .division2 a:nth-child(2) {
+  margin-left: 15px;
+  margin-right: 15px;
+  rotate: 180deg;
+}
+header .perfil {
+  display: flex;
+  flex-direction: row;
+  width: clamp(300px, 20vw, 400px);
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+header .perfil a {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+header .perfil a img {
+  height: 15px;
+  width: 30px;
+}
+header .perfil a:nth-child(1), header .perfil a:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 35px;
+  background-color: rgb(27, 44, 61);
+}
+header .perfil a:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.7em;
+  background-color: rgb(27, 44, 61);
+  color: #54a5c4;
+  height: clamp(25px, 30%, 60px);
+  width: 50%;
+  padding-right: 10px;
+  margin-top: 5px;
+  align-items: center;
+}
+header .perfil a:nth-child(3) img {
+  height: 100%;
+}
+header .perfil a:nth-child(3) p {
+  display: flex;
+  justify-content: center;
+}
+header .perfil a:nth-child(3) p img {
+  height: 15px;
+  width: 15px;
+}
+header .perfil a:nth-child(3) p:nth-child(3) {
+  color: var(--header-text1);
+}/*# sourceMappingURL=style.css.map */

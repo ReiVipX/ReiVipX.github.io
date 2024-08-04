@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@900&display=swap');
+
+:root{
+    --background: black;
+    --letter: white;
+    --font_logo: 'Rubik Moonrocks', cursive;
+    --font_base:  'Orbitron', sans-serif;
+    --font_planet_name: 'Bebas Neue', cursive;
+    --purple: #663399;
+    --bronze: goldenrod;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--letter);
+    font-family: var(--font_base);
+}
+
+
+
+
+
+
+
+/*   HEADER   */
+header .container{
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    width: 100vw;
+    background-color: var(--background);
+}
+
+header .logo{
+    font-family: var(--font_logo);
+    color: var(--letter);
+    font-size: 2.8em;
+    background-image: linear-gradient(to bottom, black, rebeccapurple, rgb(182, 24, 182),steelblue, turquoise);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    font-weight: bolder;
+    margin-left: clamp(20px,5vw,50px);
+}
+
+header nav{
+    margin-right: clamp(1vw, 2vw, 3px);
+}
+
+header nav a{
+    color: var(--letter);
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1em;
+}
+
+header nav a:hover{
+    color: var(--purple);
+    transition: 300ms;
+}
+
+#menu_icon{
+    display: none;
+}
+
+
+
+
+
+
+
+/*   CAPA   */
+main .capa {
+    font-size: 1.2em;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/universo_capa.jpg');
+    
+    height: 75vh;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .capa .container{
+    margin-left: clamp(20px,5vw,50px);
+}
+
+main .capa .nome{
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+}
+
+main .capa .descricao{
+    margin-bottom: 2.7em;
+}
+
+main .capa .botao{
+    background-color: rgba(0,0,0,.80);
+    border:none;
+    border-radius: 25px;
+    color: var(--letter);
+    font-family: var(--font_base);
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 0.6em;
+}
+
+main .capa .botao:hover{
+    background-color: white;
+    color: black;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*   CARROSSEL   */
+.carrossel_planetas h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.owl-stage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.item{
+    overflow: hidden;
+}
+
+.item .info{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: -200px;
+    transition: 300ms;
+    background-color: rgba(255, 255, 255, 0);
+    left: 0;
+    right: 0;
+}
+
+.item:hover .info{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+.item .info h3{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+
+.item .info p{
+    margin: 0 0.9em;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.item .info button{
+    background-color: rgba(0,0,0,.80);
+    border:none;
+    border-radius: 25px;
+    color: var(--letter);
+    font-family: var(--font_base);
+
+    padding: 5% 15%;
+    font-size: 0.7em;
+}
+
+.item .info button:hover{
+    background-color: white;
+    color: black;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.box_planetas{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid  var(--purple);
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+/*   MEDIA ADAPTATION   */
+@media screen and (max-width: 850px){
+    header .container{
+        position: relative;
+        justify-content: space-between;
+    }
+
+    header .container .logo{
+        
+        font-size: clamp(1.7em, 2em, 2.5em);
+        height: 100%;
+        width: 80%;
+        margin-left: 3vw;
+    }
+
+    header  nav{
+        display: none;
+    }
+
+    main .capa .descricao{
+        width: 80%;
+    }
+
+    main .capa .botao{
+        font-size: 0.5em;
+        padding: 10px 15px;
+    }
+
+    #menu_icon{
+        display: flex;
+        height: 40px;
+        width: 40px;
+        margin-right: 3vw;
+    }
+
+    .item .info{
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.356);
+    }
+}

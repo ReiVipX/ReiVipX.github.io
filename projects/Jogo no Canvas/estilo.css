@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(70, 70, 70);
+}
+
+.info{
+    float: right;
+    width: 30%;
+    height:70%;
+    text-align: center;
+    border: solid 5px white;
+    border-radius: 10%;
+    background-color: black;
+}
+
+.interface{
+    float: left;
+    margin-top: 0px;
+}
+
+#screen{
+    background-color: white;
+    border: 5px solid black;
+    cursor: crosshair;
+}
+
+.buttons{
+    text-align: center;
+    margin-top: 3px;
+    padding-top: 4px;
+    height: 30px;
+    width: fit-content;
+}
+
+.score {
+    margin:0;
+    color: white;
+    font-size: 50px;
+}
+
+.life {
+    border-top: solid 1px white;
+    margin:0;
+    color: white;
+    font-size: 50px;
+}
+
+#lifes {
+    color:red;
+}
