@@ -3,6 +3,8 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    /*outline: 1px solid red;*/
+    /*scrollbar-width: thin;*/
 }
 
 body{
@@ -11,12 +13,170 @@ body{
     background-color: azure;
 }
 
+
+
+
+
+
+/* HEADER */
+
 header nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 50px;
     padding: 0 0 0 50vw;
-    background-color: aqua;
+    background-color: rgb(17, 17, 17);
+}
+
+header nav a{
+    text-decoration: none;
+    color: white;  
+    transition: 0.5s;     
+}
+
+header nav a:hover{
+    color: rgb(245, 46, 46);  
+    transform: scale(1.1);   
+}
+
+
+
+
+
+
+
+/* MAIN */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400vh;
+    background-color: rgb(196, 196, 196);
+}
+
+main h1{
+    color: white;
+}
+
+.landpage_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 2%;
+    
+}
+
+.landpage_section:nth-child(odd){
+    background-color: brown;
+}
+
+.landpage_section:nth-child(even){
+    background-color: rgb(17, 17, 17);
+}
+
+
+
+
+
+
+/* PROJECTS */
+
+.project_grid{
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.project_grid .project_item{
+    position: relative;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.project_grid .project_item:hover{
+    transform: scale(1.05);
+}
+
+.project_grid .project_item > img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/*DEIXANDO IMAGEM DE FUNDO E OS OUTROS ELEMENTOS VISIVEIS*/
+.project_grid .project_item > *:not(img){
+    position: relative;
+    z-index: 1;
+}
+
+.project_grid .project_item .project_skills_and_tools{
+    background-color: rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: end;
+    transition: 0.5;
+}
+
+.project_grid .project_item:hover .project_skills_and_tools{
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.project_grid .project_item .project_skills_and_tools img{
+    width: 25px;
+    margin-right: 10px;
+    margin-top: 2px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.project_grid .project_item .project_info{
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 100%;
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.project_grid .project_item:hover .project_info{
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.project_grid .project_item .project_info h2{
+    background-color: transparent;
+}
+
+.project_grid .project_item .project_info p{
+    background-color: transparent;
+}
+
+
+
+
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    background-color: brown;
+    color: white;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
 }
